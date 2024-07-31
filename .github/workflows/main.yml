@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - alpha
 
 jobs:
   build:
@@ -30,7 +31,12 @@ jobs:
           EXPO_CLI_PASSWORD: ${{ secrets.EXPO_CLI_PASSWORD }}
         run: npx expo login -u $EXPO_CLI_USERNAME -p $EXPO_CLI_PASSWORD --non-interactive
 
-      - name: Build Android app (App Bundle)
+      - name: Build Android app (Alpha)
+        if: github.ref == 'refs/heads/alpha'
+        run: npx eas build --platform android --profile alpha
+
+      - name: Build Android app (Production)
+        if: github.ref == 'refs/heads/main'
         run: npx eas build --platform android --profile production
 
       - name: Upload artifact

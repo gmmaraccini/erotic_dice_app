@@ -13,7 +13,7 @@
     "alpha": {
       "android": {
         "buildType": "app-bundle",
-        "gradleCommand": ":app:bundleAlpha"
+        "gradleCommand": ":app:bundleRelease"
       }
     }
   }
