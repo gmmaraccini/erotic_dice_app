@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Expo CLI
-        run: npm install -g expo-cli
+      - name: Install EAS CLI
+        run: npm install -g eas-cli
 
       - name: Login to Expo
         env:
