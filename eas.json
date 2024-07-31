@@ -1,9 +1,19 @@
 {
   "build": {
+    "development": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      }
+    },
     "alpha": {
       "android": {
         "buildType": "app-bundle",
-        "gradleCommand": ":app:bundleRelease"
+        "gradleCommand": ":app:bundleAlpha"
       }
     }
   }
