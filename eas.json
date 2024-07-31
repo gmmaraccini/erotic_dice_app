@@ -1,0 +1,10 @@
+{
+  "build": {
+    "alpha": {
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": ":app:bundleRelease"
+      }
+    }
+  }
+}
